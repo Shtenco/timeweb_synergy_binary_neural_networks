@@ -1,0 +1,69 @@
+{
+  "article_id": "02",
+  "created_utc": "2026-11-17T14:38:34.303103+00:00",
+  "dataset": {
+    "classes": 10,
+    "feature_sha256": "a627aed550b0b29bf76a981bc1ecbab5ef775aac454c94154f20ec9f61a04c83",
+    "features": 64,
+    "license": "UCI dataset record; verify attribution/terms for redistribution",
+    "name": "Optical Recognition of Handwritten Digits (scikit-learn copy)",
+    "rows": 1797,
+    "source_id": "UCI-80-digits",
+    "source_url": "https://archive.ics.uci.edu/dataset/80/optical-recognition-of-handwritten-digits",
+    "target_sha256": "a3c91c262eddcf7ba8f0e37507c30284493c9b20412ffe4af30d536401f7ba21"
+  },
+  "environment": {
+    "logical_cpus": 4,
+    "numpy": "2.5.4",
+    "physical_memory_bytes": 4139626496,
+    "platform": "Windows-11-10.0.28000-SP0",
+    "processor": "Intel64 Family 6 Model 42 Stepping 7, GenuineIntel",
+    "python": "3.12.10",
+    "scikit_learn": "1.9.1",
+    "torch": "2.15.0+cpu",
+    "torch_threads": 1
+  },
+  "evidence_type": "measured_public_dataset",
+  "experiment": "FP32 versus STE-binarized hidden layers on UCI handwritten digits",
+  "limitations": [
+    "The sklearn digits set is a small 8x8 benchmark, not a modern vision workload.",
+    "The binary network is not fully integer: biases and final layer stay FP32; training uses FP32 straight-through gradients.",
+    "Python big-integer popcount is a correctness backend, not optimized SIMD/native code; its measured latency is implementation-specific.",
+    "Three seeds and one fixed split are an exploratory comparison, not a broad accuracy estimate."
+  ],
+  "method": {
+    "binary_inference": "Python integer XNOR/popcount for two hidden layers; FP32 final layer",
+    "binary_model": "64-128-64 binary hidden layers trained with straight-through sign; FP32 output layer",
+    "epochs": 5,
+    "float_model": "64-128-64-10 ReLU MLP, FP32 weights and activations",
+    "input_binarization": "threshold normalized pixel intensities at 8 on the original 0..16 scale",
+    "no_test_tuning": true,
+    "seeds": [
+      7
+    ],
+    "split": "stratified 75/25 split, random_state=4107, shared across models",
+    "timing_repeats": 3
+  },
+  "runs": [
+    {
+      "binary_hidden_packed_bytes": 2048,
+      "binary_packed_test_accuracy": 0.7844444444444445,
+      "binary_packed_test_batch_seconds": 0.4240584999982578,
+      "binary_torch_test_accuracy": 0.7844444444444445,
+      "binary_torch_test_batch_seconds": 0.013675466664911559,
+      "binary_total_weight_bytes": 5416,
+      "binary_train_seconds": 0.7514067000010982,
+      "binary_weight_pack_seconds": 0.017019499995512888,
+      "epochs": 5,
+      "float32_test_accuracy": 0.7777777777777778,
+      "float32_test_batch_seconds": 0.0034987666682961085,
+      "float_train_seconds": 1.152086899994174,
+      "fp32_weight_bytes": 68904,
+      "packed_forward_matches_binary_torch": true,
+      "packed_max_abs_logit_error": 7.152557373046875e-07,
+      "seed": 7,
+      "test_rows": 450,
+      "train_rows": 1347
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "repository": "timeweb_synergy_binary_neural_networks",
+  "public_source_files": 16,
+  "excluded_offline_only": [
+    "results/article-02-digits-binary-results.png"
+  ],
+  "sha256": {
+    ".gitignore": "d9d3d414f6f84c0ef3d8b09d59f49f6c2c173fab18219c9fa262db2383820cf5",
+    "README.md": "cccd166110f640fabd0c7c9342af313351eea16769c474f3c5dcb6d1b8d2bca2",
+    "prototypes/__init__.py": "7ea3e33621d03c4e3e2271d2e93e55721d45d99472f589fa698ec105fcddfdb6",
+    "prototypes/__main__.py": "c63aff76bcd5a382a42c8d13eb3c2f5fb2c564b451bdfd20819631c3725055d6",
+    "prototypes/real_experiments/article02_binary_digits.py": "c9772bc32cd08150ec89af0a51f1a4be799672366cc715c40780a4fbe8f58000",
+    "prototypes/runner.py": "3e1a59a8d2260be864749b4aa583961569fdcbee7b161f1025ae3725a841306f",
+    "prototypes/scenarios/__init__.py": "60d32f11ef7875e4b24eedf3a631281803e0295a8206e39819cf2cae243632f8",
+    "prototypes/scenarios/article02.py": "d6868823e496d4b517699dc76b4ff1dcc687a99f8794041c90234b9351b85c66",
+    "prototypes/tests/test_article02_real.py": "1897ce961b7fae1fa5b1bbf177663301f49e6f619432f05219e5afdeb3f92603",
+    "prototypes/tests/test_articles_01_05.py": "adebfab93b718e0fa121f055f7c9095c6882dad7144f82aa96433726d5089201",
+    "requirements.txt": "12b84930f4edd3f3d1fde62f07d61110a07a88bdfb5acc5338f7fda8a61b8247",
+    "results/article-02-digits-binary-20261117T143736.870152Z.json": "2c9a288f78121b75c036da67da67d64e4589735a0790f388f011964ccbcaa9f1",
+    "results/article-02-digits-binary-20261117T143834.894627Z.json": "06c007715e711d09e668f9d24fe6517e7463a56225a8e31b3b50b30d8d4ee4fc",
+    "results/article-02-digits-binary-20261117T143939.578219Z.json": "8537e8ac86eafae1a599d1dd9688dac91627ae8fdb0448b83d20395db9e926f0",
+    "results/article-02-digits-binary-20261117T144055.092711Z.json": "c385db600ec61b11a3fde009a3bd718172fd53cf284147c25db6c8c5d0b5564f",
+    "results/binary_correctness.json": "a4d11b790155e3ee17ce2fac7918374dd13e258688f2e628c0494bea77507cd6"
+  }
+}
